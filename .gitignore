@@ -7,7 +7,6 @@
 # IDE directories and files
 *.iml
 .idea/
-.vscode/
 
 # macOS files
 .DS_Store
