@@ -7,7 +7,6 @@
 # IDE directories and files
 *.iml
 .idea/
-.vscode/
 
 # macOS files
 .DS_Store
@@ -22,5 +21,4 @@ node_modules/
 .env
 
 # AI personal directories
-.cursor/
-memory-bank/ 
+.cursor/ 

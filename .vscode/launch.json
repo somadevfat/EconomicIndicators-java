@@ -1,0 +1,14 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "java",
+      "name": "Launch DemoApplication",
+      "request": "launch",
+      "mainClass": "com.example.portfolio_backend.DemoApplication",
+      "projectName": "portfolio-backend",
+      "cwd": "${workspaceFolder}/backend",
+      "preLaunchTask": "Maven Clean Verify"
+    }
+  ]
+} 
