@@ -1,0 +1,33 @@
+name: Branch Protection
+
+on:
+  push:
+    branches:
+      - main
+      - develop
+
+jobs:
+  protect-branches:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Protect main branch
+        uses: peter-evans/create-or-update-protected-branch@v2
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          branch: main
+          required-status-checks: build
+          status-checks-enforcement-level: non_admins
+          required-reviews: 1
+          dismiss-stale-reviews: true
+          enforce-admins: true
+
+      - name: Protect develop branch
+        uses: peter-evans/create-or-update-protected-branch@v2
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          branch: develop
+          required-status-checks: build
+          status-checks-enforcement-level: non_admins
+          required-reviews: 1
+          dismiss-stale-reviews: true
+          enforce-admins: true 
