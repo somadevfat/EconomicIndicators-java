@@ -1,8 +1,8 @@
 # Tasks
 
 - [x] Initialize project
-- [ ] Gitflow に基づくブランチ運用設定（feature→develop→main の PR ベースマージ）
-- [ ] Plan project (Level 3)
+- [x] Gitflow に基づくブランチ運用設定
+- [x] Plan project (Level 3)
 
 ## 1. プロジェクト計画 (Level 3)
 
