@@ -6,4 +6,5 @@ import com.example.portfolio_backend.entity.VolatilityData;
  
 public interface VolatilityDataService {
     void importVolatility(List<VolatilityData> data);
+    List<VolatilityData> getAllVolatility();
 } 

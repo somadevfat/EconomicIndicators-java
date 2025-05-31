@@ -1,12 +1,13 @@
 package com.example.portfolio_backend.service;
 
-import com.example.portfolio_backend.entity.EconomicIndicator;
-import com.example.portfolio_backend.repository.EconomicIndicatorRepository;
+import java.time.LocalDateTime;
+import java.util.List;
+
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import java.time.LocalDateTime;
-import java.util.List;
+import com.example.portfolio_backend.entity.EconomicIndicator;
+import com.example.portfolio_backend.repository.EconomicIndicatorRepository;
 
 @Service
 public class EconomicIndicatorServiceImpl implements EconomicIndicatorService {
@@ -27,5 +28,10 @@ public class EconomicIndicatorServiceImpl implements EconomicIndicatorService {
             }
             repository.save(indicator);
         }
+    }
+
+    @Override
+    public List<EconomicIndicator> getAllIndicators() {
+        return repository.findAll();
     }
 } 

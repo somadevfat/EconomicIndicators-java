@@ -34,7 +34,7 @@ services:
       - SPRING_DATASOURCE_URL=jdbc:mysql://db:3306/portfolio_db?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=Asia/Tokyo
       - SPRING_DATASOURCE_USERNAME=user
       - SPRING_DATASOURCE_PASSWORD=password
-      - SPRING_JPA_HIBERNATE_DDL_AUTO=update # 開発初期はupdateで便利
+      - SPRING_JPA_HIBERNATE_DDL_AUTO=create # 開発初期はcreateでテーブルを作成
 
 volumes:
   mysql_data: 
