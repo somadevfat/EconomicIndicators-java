@@ -1,11 +1,12 @@
 package com.example.portfolio_backend.service;
 
-import com.example.portfolio_backend.entity.VolatilityData;
-import com.example.portfolio_backend.repository.VolatilityDataRepository;
+import java.util.List;
+
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import java.util.List;
+import com.example.portfolio_backend.entity.VolatilityData;
+import com.example.portfolio_backend.repository.VolatilityDataRepository;
 
 @Service
 public class VolatilityDataServiceImpl implements VolatilityDataService {
@@ -22,5 +23,10 @@ public class VolatilityDataServiceImpl implements VolatilityDataService {
         for (VolatilityData entry : data) {
             repository.save(entry);
         }
+    }
+
+    @Override
+    public List<VolatilityData> getAllVolatility() {
+        return repository.findAll();
     }
 } 
